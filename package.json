@@ -1,0 +1,41 @@
+{
+  "name": "await-targz",
+  "version": "1.0.0",
+  "description": "Make a thenable wrapper for tar functionalities",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "eslint -c .eslintrc --fix *.js test/**/*.test.js",
+    "pretest": "npm run lint:fix",
+    "test:mocha": "DEBUG=await-targz:* mocha test/*.test.js",
+    "test": "nyc --reporter=text --reporter=json-summary npm run test:mocha"
+  },
+  "keywords": [
+    "thenable",
+    "async",
+    "tar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ywangii/await-targz"
+  },
+  "author": "Yiding Wang",
+  "license": "MIT",
+  "dependencies": {
+    "cdnup": "^2.5.0",
+    "diagnostics": "^1.1.0",
+    "object-assign": "^4.1.1",
+    "pump": "^3.0.0",
+    "tar-fs": "^1.16.2"
+  },
+  "devDependencies": {
+    "assume": "^2.0.1",
+    "assume-sinon": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-godaddy": "^2.1.0",
+    "eslint-config-godaddy-es5": "^2.1.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-mocha": "^4.12.1",
+    "nyc": "^11.7.1",
+    "sinon": "^5.0.7"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "bucket": "some-mock-bucket",
+  "pkgcloud": {
+    "provider": "amazon",
+    "endpoint": "some-end-point",
+    "keyId": "thisisamockkeyid",
+    "key": "thisisamockkey",
+    "forcePathBucket": true
+  }
+}
+
