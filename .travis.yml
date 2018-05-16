@@ -5,8 +5,8 @@ node_js:
 addons:
   apt:
     update: true
-scripts:
-  - "npm test"
+script:
+  - "npm run test"
 after_success:
   - "npm run coverage"
 matrix:
