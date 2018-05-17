@@ -1,4 +1,4 @@
-# await-targz
+# await-targz [![Build Status](https://travis-ci.org/ywangii/await-targz.svg?branch=master)](https://travis-ci.org/ywangii/await-targz) [![Coverage Status](https://coveralls.io/repos/github/ywangii/await-targz/badge.svg?branch=travis)](https://coveralls.io/github/ywangii/await-targz?branch=travis)
 
 await-targz is a module working with `Promise` and `async/await` providing operations to pack, unpack, upload and download tarballs. It uses the [pkgcloud API](https://github.com/pkgcloud/pkgcloud) which supports interactions with multiple cloud providers.
 

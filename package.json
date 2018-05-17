@@ -7,7 +7,8 @@
     "lint:fix": "eslint -c .eslintrc --fix *.js test/**/*.test.js",
     "pretest": "npm run lint:fix",
     "test:mocha": "DEBUG=await-targz:* mocha test/*.test.js",
-    "test": "nyc --reporter=text --reporter=json-summary npm run test:mocha"
+    "test": "nyc --reporter=text --reporter=json-summary npm run test:mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "thenable",
@@ -30,11 +31,13 @@
   "devDependencies": {
     "assume": "^2.0.1",
     "assume-sinon": "^1.0.0",
+    "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-godaddy": "^2.1.0",
     "eslint-config-godaddy-es5": "^2.1.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-mocha": "^4.12.1",
+    "mocha": "^5.1.1",
     "nyc": "^11.7.1",
     "sinon": "^5.0.7"
   }
