@@ -1,6 +1,6 @@
 {
   "name": "await-targz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make a thenable wrapper for tar functionalities",
   "main": "index.js",
   "scripts": {
