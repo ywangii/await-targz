@@ -68,7 +68,7 @@ Once when you finish uploading, you can check through the corresponding cloud cl
 You can download an existing tarball to a given directory using:
 
 ```js
-tar.download(some-component-1a2b3c4.tgz, { tarball: 'path/to/save/tarball/some-component.tar' });
+tar.download('some-component-1a2b3c4.tgz', { tarball: 'path/to/save/tarball/some-component.tar' });
 ```
 
 ### exists
