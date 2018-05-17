@@ -58,10 +58,7 @@ tar.unpack('path/to/tarball/some-component.tar', 'path/to/dir/some-component');
 Once when the pkgcloud API is setup correctly, you can upload the tarball to the provided endpoint, e.g. Ceph object center.
 
 ```js
-tar.upload({
-  name: 'some-component',
-  revision: '1a2b3c4'
-}, 'path/to/tarball/some-component.tar');
+tar.upload('some-component-1a2b3c4.tgz', 'path/to/tarball/some-component.tar');
 ```
 
 Once when you finish uploading, you can check through the corresponding cloud client UI/console to see if the tarball with name e.g. `some-component-1a2b3c4.tgz` is there or not.
@@ -71,10 +68,7 @@ Once when you finish uploading, you can check through the corresponding cloud cl
 You can download an existing tarball to a given directory using:
 
 ```js
-tar.download({
-  name: 'some-component',
-  revision: '1a2b3c4'
-}, { tarball: 'path/to/save/tarball/some-component.tar' });
+tar.download(some-component-1a2b3c4.tgz, { tarball: 'path/to/save/tarball/some-component.tar' });
 ```
 
 ### exists
@@ -82,10 +76,7 @@ tar.download({
 You can check if a file/tarball exists or not in remote storage by using:
 
 ```js
-tar.exists({
-  name: 'some-component',
-  revision: '1a2b3c4'
-});
+tar.exists('some-component-1a2b3c4.tgz');
 ```
 
 ### Test
