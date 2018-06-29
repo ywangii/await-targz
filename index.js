@@ -130,10 +130,10 @@ module.exports = class Tar {
    * @public
    */
   download(filename, paths) {
+    const logOpts = { filename };
+
     return {
       then: (fulfill, reject) => {
-        const logOpts = { filename };
-
         const download = this.cdn.client.download({
           container: this.cdnConfig.bucket,
           remote: filename
@@ -149,6 +149,39 @@ module.exports = class Tar {
           }
 
           reject(error);
+        });
+      }
+    };
+  }
+
+  /**
+   * Remove tarballs from database
+   *
+   * @param {String} filename file/tarball name stored in remote storage
+   * @param {Object} paths Path object
+   * @returns {Promise} A promise represents if download tar succeeds or fails
+   *
+   * @public
+   */
+
+  remove(filename) {
+    const logOpts = { filename };
+
+    return {
+      then: (fulfill, reject) => {
+        this.cdn.client.removeFile(this.cdnConfig.bucket, filename, err => {
+          if (err) {
+            this.log.error(`Failed to remove the file from database`, {
+              ...logOpts,
+              message: err.message,
+              stack: err.stack
+            });
+
+            return reject(err);
+          }
+
+          this.log.info(`Tarball ${filename} is removed`);
+          fulfill();
         });
       }
     };

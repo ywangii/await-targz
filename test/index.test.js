@@ -249,6 +249,34 @@ describe('Tar', function () {
     });
   });
 
+  describe('remove', () => {
+    let removeFileStub;
+
+    beforeEach(() => {
+      removeFileStub = sinon.stub(tarInstance.cdn.client, 'removeFile');
+    });
+
+    it('removes the file', async () => {
+      removeFileStub.yieldsAsync(null);
+      await tarInstance.remove(filename);
+
+      assume(tarInstance.log.info.calledWith(`Tarball ${filename} is removed`)).true();
+    });
+
+    it('rejects error when `client.removeFile` failed', async () => {
+      removeFileStub.yieldsAsync(new Error('removeFile error'));
+
+      try {
+        await tarInstance.remove(filename);
+      } catch (e) {
+        testError(e, `removeFile error`, `Failed to remove the file from database`);
+        return;
+      }
+
+      throw new Error('test should have thrown an error');
+    });
+  });
+
   describe('exists', () => {
     let getFileStub;
 
