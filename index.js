@@ -155,11 +155,10 @@ module.exports = class Tar {
   }
 
   /**
-   * Remove tarballs from database
+   * Remove tarballs from remote storage
    *
    * @param {String} filename file/tarball name stored in remote storage
-   * @param {Object} paths Path object
-   * @returns {Promise} A promise represents if download tar succeeds or fails
+   * @returns {Promise} A promise represents if the tarball gets removed or not
    *
    * @public
    */
