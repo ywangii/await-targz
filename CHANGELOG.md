@@ -1,5 +1,7 @@
 # CHANGELOG
 
+### 1.1.0
+
 -[#2] Implement API for removing tarball from remote storage.
 
 ### 1.0.2
