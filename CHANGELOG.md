@@ -1,5 +1,7 @@
 # CHANGELOG
 
+-[#2] Implement API for removing tarball from remote storage.
+
 ### 1.0.2
 
 - Update README.md.
@@ -14,4 +16,4 @@
 
 
 [#1]: https://github.com/ywangii/await-targz/pull/1
-
+[#2]: https://github.com/ywangii/await-targz/pull/2
