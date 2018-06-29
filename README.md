@@ -71,6 +71,14 @@ You can download an existing tarball to a given directory using:
 tar.download('some-component-1a2b3c4.tgz', { tarball: 'path/to/save/tarball/some-component.tar' });
 ```
 
+### remove
+
+You can remove an existing tarball from the remote storage by using:
+
+```js
+tar.remove('some-component-1a2b3c4.tgz');
+```
+
 ### exists
 
 You can check if a file/tarball exists or not in remote storage by using:
