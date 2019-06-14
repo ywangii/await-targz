@@ -22,7 +22,7 @@
   "author": "Yiding Wang",
   "license": "MIT",
   "dependencies": {
-    "cdnup": "^2.5.0",
+    "cdnup": "^4.0.0",
     "diagnostics": "^1.1.0",
     "object-assign": "^4.1.1",
     "pump": "^3.0.0",
