@@ -1,5 +1,7 @@
 # CHANGELOG
 
+### 1.2.0
+
 - [#3] Bump `cdnup` to `4.0.0`
 
 ### 1.1.0
